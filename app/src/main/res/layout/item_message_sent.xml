@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You"
+        android:layout_marginEnd="8dp"
+        android:textSize="@dimen/profile_name_text_size"
+        app:layout_constraintEnd_toEndOf="@id/sent_text_message_body"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/sent_text_message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Hello"
+        android:background="@drawable/rounded_rectangle_green"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="@dimen/line_spacing"
+        android:padding="8dp"
+        android:maxWidth="@dimen/chat_box_max_width"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/text_view_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <TextView
+        android:id="@+id/sent_timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:45"
+        android:textSize="@dimen/timestamp_text_view"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/sent_text_message_body"
+        app:layout_constraintEnd_toStartOf="@id/sent_text_message_body"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

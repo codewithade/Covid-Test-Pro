@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/layout_padding_top"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_profile_checkbox"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/text_view_margin_start"
+        android:contentDescription="@string/profile_image"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message_name_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_view_margin_start"
+        android:layout_marginTop="@dimen/text_view_margin_top"
+        android:text="John Doe"
+        android:textSize="@dimen/profile_name_text_size"
+        app:layout_constraintStart_toEndOf="@id/image_profile_checkbox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_rectangle"
+        app:layout_constraintStart_toEndOf="@id/image_profile_checkbox"
+        app:layout_constraintTop_toBottomOf="@id/message_name_checkbox"
+        android:layout_marginStart="@dimen/text_view_margin_start"
+        android:layout_marginTop="@dimen/text_view_margin_top"
+        android:padding="@dimen/chat_message_text_padding">
+
+        <TextView
+            android:id="@+id/question_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/line_spacing"
+            android:paddingTop="@dimen/checkbox_padding"
+            android:paddingBottom="@dimen/checkbox_padding"
+            android:paddingStart="@dimen/checkbox_padding"
+            android:paddingEnd="@dimen/checkbox_padding"
+            android:maxWidth="@dimen/chat_box_max_width"
+            android:text="Check the boxes that apply to you"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:id="@+id/layout_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/send_button_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center|bottom"
+            android:textColor="@drawable/send_button_text_color"
+            android:background="@drawable/send_button_background"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timeline_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/time_text_view_margin"
+        android:text="11:40"
+        android:textSize="@dimen/timestamp_text_view"
+        app:layout_constraintBottom_toBottomOf="@id/linear_layout_checkbox"
+        app:layout_constraintStart_toEndOf="@id/linear_layout_checkbox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/last_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/activity_board_margin"
+            android:paddingStart="@dimen/activity_board_margin"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ViewFlipper
+            android:id="@+id/stats_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:autoStart="true"
+            android:paddingLeft="@dimen/activity_board_margin"
+            android:paddingRight="@dimen/activity_board_margin"
+            android:paddingBottom="@dimen/activity_board_margin"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/statistics_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switcher_child_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/global"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="2dp"
+                    android:text="Global"
+                    app:layout_constraintBottom_toTopOf="@id/global_name_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_name_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/global_name_2"
+                    app:layout_constraintEnd_toStartOf="@id/global_value_1"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/global"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_value_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/colorT2"
+                    app:layout_constraintBottom_toTopOf="@id/global_value_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/global_name_1"
+                    app:layout_constraintTop_toBottomOf="@id/global"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_name_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Deaths"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/global_name_3"
+                    app:layout_constraintEnd_toStartOf="@id/global_value_2"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/global_name_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_value_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/deaths"
+                    app:layout_constraintBottom_toTopOf="@id/global_value_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/global_name_2"
+                    app:layout_constraintTop_toBottomOf="@id/global_value_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_name_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Territories with cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/global_value_3"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/global_name_2"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/global_value_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/global_name_3"
+                    app:layout_constraintTop_toBottomOf="@id/global_value_2"
+                    app:layout_constraintVertical_weight="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switcher_child_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/local"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="2dp"
+                    android:text="Nigeria"
+                    app:layout_constraintBottom_toTopOf="@id/local_name_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_name_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/local_name_2"
+                    app:layout_constraintEnd_toStartOf="@id/local_value_1"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_value_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/colorT2"
+                    app:layout_constraintBottom_toTopOf="@id/local_value_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_name_1"
+                    app:layout_constraintTop_toBottomOf="@id/local"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_name_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Active Cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/local_name_3"
+                    app:layout_constraintEnd_toStartOf="@id/local_value_2"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local_name_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_value_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@id/local_value_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_name_2"
+                    app:layout_constraintTop_toBottomOf="@id/local_value_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_name_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Number Discharged"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/local_value_3"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local_name_2"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_value_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/dischargedValue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_name_3"
+                    app:layout_constraintTop_toBottomOf="@id/local_value_2"
+                    app:layout_constraintVertical_weight="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switcher_child_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/local_detail"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="2dp"
+                    android:text="Nigeria"
+                    app:layout_constraintBottom_toTopOf="@id/local_detail_name_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_name_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Samples Tested"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/local_detail_name_2"
+                    app:layout_constraintEnd_toStartOf="@id/local_detail_value_1"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_value_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/colorT2"
+                    app:layout_constraintBottom_toTopOf="@id/local_detail_value_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_detail_name_1"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_name_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Deaths"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/local_detail_name_3"
+                    app:layout_constraintEnd_toStartOf="@id/local_detail_value_2"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail_name_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_value_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/deaths"
+                    app:layout_constraintBottom_toTopOf="@id/local_detail_value_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_detail_name_2"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail_value_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_name_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="States with Cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/local_detail_value_3"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail_name_2"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/local_detail_value_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/local_detail_name_3"
+                    app:layout_constraintTop_toBottomOf="@id/local_detail_value_2"
+                    app:layout_constraintVertical_weight="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switcher_child_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/africa"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="2dp"
+                    android:text="Africa"
+                    app:layout_constraintBottom_toTopOf="@id/africa_name_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_name_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Cases"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/africa_name_2"
+                    app:layout_constraintEnd_toStartOf="@id/africa_value_1"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/africa"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_value_1"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/colorT2"
+                    app:layout_constraintBottom_toTopOf="@id/africa_value_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/africa_name_1"
+                    app:layout_constraintTop_toBottomOf="@id/africa"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_name_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Deaths"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/africa_name_3"
+                    app:layout_constraintEnd_toStartOf="@id/africa_value_2"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/africa_name_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_value_2"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/deaths"
+                    app:layout_constraintBottom_toTopOf="@id/africa_value_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/africa_name_2"
+                    app:layout_constraintTop_toBottomOf="@id/africa_value_1"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_name_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_1"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="Confirmed Recoveries"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/africa_value_3"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/africa_name_2"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/africa_value_3"
+                    style="@style/DetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/bg_2"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="@dimen/item_stats_padding"
+                    android:singleLine="true"
+                    android:text="@string/default_count"
+                    android:textColor="@color/dischargedValue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/africa_name_3"
+                    app:layout_constraintTop_toBottomOf="@id/africa_value_2"
+                    app:layout_constraintVertical_weight="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ViewFlipper>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/statistics_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/colorPrimary"
+            android:scrollbars="vertical"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stats_view_flipper"
+            app:layout_constraintVertical_weight="3"
+            tools:listitem="@layout/item_statistics" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

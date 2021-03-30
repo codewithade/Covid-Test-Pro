@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/menu_sidebar"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/main_menu_image_height"
+            app:layout_constraintEnd_toStartOf="@+id/counter_linear_layout"
+            app:layout_constraintStart_toEndOf="@id/menu_sidebar"
+            app:layout_constraintTop_toBottomOf="@id/main_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/testchat" />
+
+        <LinearLayout
+            android:id="@+id/counter_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/main_image"
+            android:background="@drawable/menu_count_background"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Usage"
+                style="@style/DetailTitle"/>
+
+            <TextView
+                android:id="@+id/usage_stats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="100%"
+                style="@style/subHead"
+                android:textColor="@color/chatBubble"
+                android:gravity="center_horizontal|center_vertical"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/main_overflow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_more_vert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_caption"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_caption"
+            style="@style/Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Diagnosis Chat"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/main_image"
+            app:layout_constraintEnd_toStartOf="@+id/main_overflow_button"
+            app:layout_constraintStart_toEndOf="@id/menu_sidebar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

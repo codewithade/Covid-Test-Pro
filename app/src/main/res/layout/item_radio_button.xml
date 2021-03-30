@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/checkbox_padding"
+    android:paddingBottom="@dimen/checkbox_padding"
+    android:paddingStart="@dimen/checkbox_padding"
+    android:paddingEnd="@dimen/checkbox_padding"
+    android:maxWidth="@dimen/chat_box_max_width"
+    android:text="No"
+    android:textColor="#ffffff"/>

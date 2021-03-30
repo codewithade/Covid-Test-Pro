@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/chat_box_max_width"
+    android:paddingTop="@dimen/checkbox_padding"
+    android:paddingBottom="@dimen/checkbox_padding"
+    android:paddingStart="@dimen/checkbox_padding"
+    android:paddingEnd="@dimen/checkbox_padding"
+    android:text="Are you having difficulty breathing?"
+    android:textColor="#ffffff" />

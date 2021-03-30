@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#6200EE</color>-->
+    <color name="colorPrimaryDark">#104b69</color>
+    <color name="colorPrimary">#146489</color>
+    <!--<color name="colorPrimaryDark">#3700B3</color>-->
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorT2">#607D8B</color>
+    <color name="colorT3">#37474F</color>
+    <color name="chatBubble">#FF6E00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="button_disabled">#DDDDDD</color>
+
+    <!--stats frag color palette-->
+    <color name="bg_1">#a324a5</color>
+    <color name="bg_2">#FFFFFF</color>
+    <!--<color name="bg_2">#a23546</color>-->
+
+    <color name="activeValue">#FFD600</color>
+    <color name="dischargedValue">#00C853</color>
+    <color name="deaths">#D50000</color>
+</resources>

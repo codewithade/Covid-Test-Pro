@@ -1,0 +1,447 @@
+<resources>
+    <string name="app_name">Covid Test Pro</string>
+    <string name="app_name_main_page">Home</string>
+    <string name="app_name_diagnosis">Diagnostic Test</string>
+    <string name="app_name_hospitals_nearby">Hospitals Nearby</string>
+    <string name="app_name_qna">Q and A</string>
+    <string name="app_name_stats">Updated Stats</string>
+    <string name="app_name_links">Links</string>
+    <string name="app_name_prevention">Prevention</string>
+    <string name="app_name_contact">About</string>
+    <string name="title_activity_update_database">Update Database</string>
+
+    <string name="test">%1$d guesses, %2$.02f%% correct</string>
+    <string name="usage_percentage">%1$d%%</string>
+
+    <!--AI Chat Questions and Replies-->
+    <string-array name="preliminary_statements">
+        <item>Hi there!\nI can assist you in having a quick COVID-19 test if you like.\nAll information supplied here is private to you.</item>
+        <item>Hello to you!\nThis platform affords you an opportunity to take a quick test on the COVID-19 virus\nRemember your privacy is protected.</item>
+        <item>Hi, How are you doing today?\nI would like to help you through a quick COVID-19 test.\nAll information passed here is private to you only.</item>
+        <item>Hello!\nI am here to assist you in taking a quick COVID-19 test. \nYour privacy is well protected and all information supplied here is exclusive to you alone.</item>
+    </string-array>
+
+    <string-array name="keep_taking_precautionary_steps">
+        <item>Okay. Keep up the good work and continue practising the precautionary methods!\nKeep safe!\n\nType \"test\" to start a new test</item>
+        <item>You are helping to save the planet by practising these precautionary measures. Keep it up!\nRemain safe!\n\nType \"test\" to start a new test</item>
+        <item>Please kindly continue practicing these precautionary measures.\nBe an ambassador and spread information on how to reduce the spread of COVID-19\nCOVID-19 would be defeated!\nKeep safe\n\nStart a new test by sending \"test\".</item>
+    </string-array>
+
+    <string-array name="poor_precautionary_steps">
+        <item>You are not taking enough precautionary measures and hence placing yourself at a high risk of getting infected.\n\nKindly ensure that you change and start observing the following precautionary measure(s):\n</item>
+        <item>You are at a higher risk of getting infected with COVID-19 as you are not taking enough precautionary measures.\n\nEnsure that you adhere to the following precautionary measure(s):\n</item>
+        <item>You are highly likely to be exposed to contracting the virus as you\'re not taking enough precautionary measures.\n\nPlease practice the following preventive measure(s):\n</item>
+    </string-array>
+
+    <string-array name="test">
+        <item>Health is wealth!\n\nType \"test\" to start a new test.\n\nClick the button below to see a list of the closest primary health care centres to you.</item>
+        <item>Stay safe!\n\nStart a new test by sending \"test\".\n\nClick the button below to see a list of the closest primary health care centres to you.</item>
+        <item>Be safe!\n\nStart a new test by sending \"test\".\n\nClick the button below to see a list of the closest primary health care centres to you.</item>
+    </string-array>
+
+    <string-array name="fair_precautionary_steps">
+        <item>You are doing well but you can also do so much more.\n\nIn addition, practice the following precautionary measure(s):\n</item>
+        <item>Our ability to stop the spread lies on us taking much more precautions.\n\nEnsure you also practice the following precautionary measure(s):\n</item>
+        <item>You and your loved ones would be much safer if you practice all the precautionary measures.\n\nThe following precautionary measure(s) should also be a part of you:\n</item>
+    </string-array>
+
+    <string-array name="r_take_test_statements">
+        <item>Would you like to take a quick COVID-19 test?</item>
+        <item>Take a Diagnosis Test on COVID-19?</item>
+        <item>Can we kick-start the COVID-19 test?</item>
+    </string-array>
+
+    <string-array name="c_precautionary_measures_question">
+        <item>Are you observing any of the following precautionary measure(s)?</item>
+        <item>Do you maintain proper hygiene by observing any of these precautionary measure(s)?</item>
+        <item>Select some of the measure(s) you have adopted during the COVID-19 outbreak</item>
+        <item>To prevent infection and to slow transmission of COVID-19, which of the following do you do?</item>
+    </string-array>
+
+    <string-array name="c_precautionary_measures_adopted">
+        <item>Social distancing</item>
+        <item>Coughing into a flexed elbow</item>
+        <item>Use of alcohol-based hand rub</item>
+        <item>Consistent washing of hands with soap under running water</item>
+        <item>Use of face mask</item>
+        <item>Use of hand gloves</item>
+        <item>Covering your mouth and nose when coughing or sneezing.</item>
+        <item>Refraining from smoking and other activities that weakens the lungs</item>
+    </string-array>
+
+    <string-array name="info_statements">
+        <item>The COVID-19 virus affects different people in different ways.\nCOVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment.\nPeople who have underlying medical conditions and those over 60 years old have a higher risk of developing severe disease and death (WHO).\n\nSend \"test\" to start a test</item>
+        <item>You can take the test at any time.\nStay up to date with information on COVID-19 by checking the homepage.\nStay safe!\n\nYou can always start a test by typing and sending \"test\".</item>
+        <item>Chat with you some other time.\nKindly ensure you:\nMaintain social distance of at least 2 metres.\nWash your hands regularly.\nSanitize your hands with alcohol based sanitizers.\n\nStay Safe!\n\nSend \"test\" to start a new test</item>
+        <item>Okay. Maybe some other time.\nPractice proper hygiene and maintain recommended social distance\nPlease stay at home if you are a non-essential staff\nFor more info on Covid-19, check the front page.\n\nBe Safe!\n\nSend \"test\" to start a test</item>
+        <item>For more info on COVID-19, check the dashboard on the homepage.\nStay safe!\n\nSend \"test\" to take the diagnosis test at any time.</item>
+        <item>The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow) (WHO).\n\nBe Safe!\n\nSend \"test\" to start a test</item>
+        <item>The best way to prevent and slow down COVID-19 transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads.\nProtect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face (WHO).\n\nSend \"test\" to start a new test\n\nBe Safe!</item>
+        <item>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.\nIf you are not a health worker or an essential staff, kindly stay at home and avoid crowded areas.\n\nStay Safe!\n\nSend \"test\" to start a test</item>
+    </string-array>
+
+    <string-array name="r_nursing_sickness">
+        <item>Are you currently nursing any sickness?</item>
+        <item>Are you sick?</item>
+        <item>Do you feel sick?</item>
+        <item>Are you feeling unwell?</item>
+    </string-array>
+
+    <string-array name="c_symptoms_statements">
+        <item>Are you experiencing any of the following Symptoms?</item>
+        <item>Do you have any of the following symptoms?</item>
+        <item>Which of the following symptoms are you experiencing?</item>
+    </string-array>
+
+    <string-array name="c_symptoms_list_statements">
+        <item>Persistent dry cough</item>
+        <item>Fever</item>
+        <item>Shortness of breath</item>
+        <item>Runny nose</item>
+        <item>Tiredness</item>
+        <item>Sore throat</item>
+        <item>Aches and pain</item>
+        <item>Diarrhoea</item>
+        <item>Nausea</item>
+        <item>Loss of sense of smell</item>
+        <item>Loss of sense of taste</item>
+    </string-array>
+
+    <string-array name="critical_symptoms">
+        <item>Persistent dry cough</item>
+        <item>Fever</item>
+        <item>Shortness of breath</item>
+        <item>Loss of sense of smell</item>
+        <item>Loss of sense of taste</item>
+    </string-array>
+
+    <string-array name="r_prior_illness_statements">
+        <item>Have you had any prior respiratory illness?</item>
+        <item>Have you had any respiratory problems in the past?</item>
+        <item>Have you suffered from any fever related illness before?</item>
+    </string-array>
+
+    <string-array name="c_previous_symptoms_duration">
+        <item>How long did your last illness last?</item>
+        <item>How long did the symptoms last?</item>
+        <item>How long did the previous symptoms last?</item>
+    </string-array>
+
+    <string-array name="c_current_symptoms_duration">
+        <item>How long has these current symptoms lasted?</item>
+        <item>How long has these present symptoms persisted?</item>
+        <item>How long have you been experiencing these present symptoms?</item>
+    </string-array>
+
+    <string-array name="r_travel_statements">
+        <item>Did you visit any of the high risk countries in the past 14 days?</item>
+        <item>Did you visit any country with confirmed COVID-19 cases of recent?</item>
+        <item>Have you recently visited any country with confirmed cases of COVID-19?</item>
+        <item>Were you in close contact with anyone that recently travelled to a country with confirmed COVID-19 cases?</item>
+    </string-array>
+
+    <string-array name="r_state_travel_statements">
+        <item>Have you travelled to an state of recent?</item>
+        <item>Did you visit any state in the last 14 days?</item>
+        <item>Have you recently visited any state with confirmed cases of COVID-19?</item>
+        <item>Were you in close contact with anyone that recently travelled to a state with confirmed COVID-19 cases? </item>
+        <item>Did you go on any inter-state journey of late?</item>
+    </string-array>
+
+    <string-array name="ncdc_contact_statements">
+        <item>Contact The Nigerian Centre for disease Control (NCDC):\n\nPhone: 080097000010\nSMS: 08099555577\nWhatsapp: 07087110839\nFb/Twitter: @NCDCgov\nEmail: info@ncdc.gov.ng\n\nNot satisfied? Take the test again by sending \"test\".</item>
+        <item>Kindly contact the closest primary health care centres for advice.\n\nContact NCDC:\nPhone: 080097000010\nSMS: 08099555577\nWhatsapp: 07087110839\nFb/Twitter: @NCDCgov\nEmail: info@ncdc.gov.ng\n\nNot satisfied? Test again by sending \"test\".</item>
+        <item>Get Tested to know your status by contacting NCDC via:\n\nPhone: 080097000010\nSMS: 08099555577\nWhatsapp: 07087110839\nFb/Twitter: @NCDCgov\nEmail: info@ncdc.gov.ng\n\nNot satisfied? you can take the test again by sending \"test\".</item>
+    </string-array>
+
+    <string-array name="phc_contact_statements">
+        <item>Contact the closest primary health care center to you to get proper medical help.\n\n</item>
+        <item>Go to the closest hospital or clinic to get tested and treated.\n\n</item>
+        <item>Kindly visit the nearest Health centre closest to you to get tested.\n\n</item>
+    </string-array>
+
+    <string-array name="r_retest_statements">
+        <item>Would you like to take another test?</item>
+        <item>Not satisfied? you can take the test again.</item>
+    </string-array>
+
+    <!--STAY AT HOME MODULE-->
+
+    <string-array name="r_at_home_question">
+        <item>Are you at home?</item>
+        <item>Are you presently at home?</item>
+        <item>Are you staying at home?</item>
+    </string-array>
+
+    <string-array name="yes_at_home">
+        <item>Kindly remain at home if you are not an essential worker as your obedience helps to flatten the COVID-19 curve.</item>
+        <item>That is good!\nAvoiding social gathering and staying back home helps to reduce community transmission of the virus.</item>
+        <item>Staying at home reduces chances of community spreading.</item>
+    </string-array>
+
+    <string-array name="no_at_home">
+        <item>Are you above 60 years?</item>
+        <item>Are you above 55 years old?</item>
+        <item>Are you above 60 years of age?</item>
+    </string-array>
+
+    <string-array name="no_below_60">
+        <item>Staying away from crowded areas reduces the likelihood of community transmission.\nIf you are not an essential staff, please stay at home.\nIf you must go out, use a face mask to protect yourself and those around you.\n</item>
+        <item>If you are not a health worker or an essential staff, kindly stay at home as you have a high chance of contracting the virus or spreading it.\n</item>
+        <item>Most COVID-19 patients usually show little or no symptoms.\nIt is therefore advised that you avoid social gatherings and remain at home if you are a non-essential staff.\n</item>
+    </string-array>
+
+    <string-array name="yes_above_60">
+        <item>You have a higher chance of getting infected with the virus and due to your age, your immune system might not be strong enough to fight the virus if infected.\nKindly remain at home and avoid social gatherings.\n</item>
+        <item>Statistics has shown a high fatality rate within your age group as a result of a weak immune system.\nIt is therefore advised that you stay at home and avoid social gatherings.\n</item>
+        <item>A high mortality rate has been observed with people within your age group.\nHowever, avoiding social gatherings and staying at home reduces the risk of contracting the virus.\n</item>
+    </string-array>
+
+    <!--STAY AT HOME MODULE-->
+
+    <string-array name="c_days_symptoms">
+        <item>2 to 3 days</item>
+        <item>4 to 7 days</item>
+        <item>8 to 12 days</item>
+        <item>Above 12 days</item>
+    </string-array>
+
+    <string-array name="r_yes_or_no_radio">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="profile_images">
+        <item>@drawable/doc1</item>
+        <item>@drawable/doc2</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/doc3</item>
+    </string-array>
+
+    <string-array name="usernames">
+        <item>Siri</item>
+        <item>Watson</item>
+        <item>Alexa</item>
+        <item>Cortana</item>
+    </string-array>
+
+    <!--Main menu string resources-->
+    <string-array name="main_title">
+        <item>Diagnosis Chat</item>
+        <item>Statistics</item>
+        <item>Update Database</item>
+        <item>QnA</item>
+        <item>External Links</item>
+        <item>Preventive Steps</item>
+        <item>About</item>
+    </string-array>
+
+    <string-array name="sub_title">
+        <item>Diagnostic Test</item>
+        <item>Get Latest Statistics</item>
+        <item>Update the Firestore database</item>
+        <item>Question and Answer</item>
+        <item>Useful External Links</item>
+        <item>Get Informed</item>
+        <item>About the app and credits</item>
+    </string-array>
+
+    <string-array name="title_comments">
+        <item>Interact with the health chat platform and get instant diagnosis and recommendation</item>
+        <item>Get an updated statistics of COVID-19 both locally and around the world</item>
+        <item>Populates the cloud firestore database with updated data</item>
+        <item>Get answers to pertinent questions on COVID-19</item>
+        <item>List of credible web sources on the COVID-19 pandemic</item>
+        <item>Follow recommended preventive measures to reduce risk of contracting the COVID-19 virus</item>
+        <item>Know the information sources and contact the development team</item>
+    </string-array>
+
+    <integer-array name="menu_ID">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+
+    <string-array name="main_menu_images">
+        <item>@drawable/diagnosisimage</item>
+        <item>@drawable/statisticsimage</item>
+        <item>@drawable/updateimage</item>
+        <item>@drawable/qandaimage</item>
+        <item>@drawable/externalimage</item>
+        <item>@drawable/preventionimage</item>
+        <item>@drawable/aboutimage</item>
+    </string-array>
+
+    <!--Main menu string resources-->
+
+    <string-array name="error_list">
+        <item>Please check internet connection and try again.</item>
+        <item>Unable to load page. No internet connection</item>
+        <item>Requires internet connection to get latest updates.</item>
+        <item>Please ensure that you enable your internet connection</item>
+        <item>Please ensure you have an internet connection.</item>
+        <item>No internet connection</item>
+    </string-array>
+
+    <string name="statistics_fragment">Get Latest Statistics</string>
+    <string name="qna_fragment">Question and answer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hint_text">Type \"test\"</string>
+    <string name="send_message_button">Send message</string>
+    <string name="profile_image">profile image</string>
+    <string name="error_empty_option">You must select an option from the list</string>
+    <string name="menu_reload_title">Reload</string>
+    <string name="default_count">0</string>
+    <string name="phone_number">+234 806 071 3589</string>
+    <string name="home_dashboard">home dashboard showing doctors</string>
+    <string name="summary_text">This app provides detailed information and updates about the COVID-19 virus (Coronavirus) both locally and internationally. The information shown in these app are gotten from recommended health sources. Some of the sources of these information are listed in the section below.</string>
+
+    <string name="channel_name">Covid Test Channel</string>
+    <string name="channel_description">Get new COVID-19 statistics update</string>
+    <string name="msg_token_fmt">message token: %1$s</string>
+
+    <!--External Links-->
+    <string-array name="link_url">
+        <item>https://covid19.ncdc.gov.ng/</item>
+        <item>https://www.who.int/emergencies/diseases/novel-coronavirus-2019</item>
+        <item>https://www.health.gov.ng/</item>
+        <item>https://www.un.org/coronavirus</item>
+        <item>https://www.who.int/news-room/q-a-detail/5g-mobile-networks-and-health</item>
+        <item>https://www.cdc.gov/coronavirus/2019-nCoV/index.html</item>
+        <item>https://www.who.int/news-room/q-a-detail/q-a-on-mass-gatherings-and-covid-19</item>
+        <item>https://www.who.int/news-room/q-a-detail/q-a-similarities-and-differences-covid-19-and-influenza</item>
+        <item>https://www.who.int/news-room/q-a-detail/q-a-on-covid-19-pregnancy-childbirth-and-breastfeeding</item>
+        <item>https://africacdc.org/</item>
+    </string-array>
+
+    <string-array name="link_title">
+        <item>Nigeria CDC</item>
+        <item>WHO</item>
+        <item>Ministry of Health</item>
+        <item>United Nations</item>
+        <item>5G and Health</item>
+        <item>American CDC</item>
+        <item>Mass Gathering</item>
+        <item>Similarities and Differences</item>
+        <item>Pregnancy, Childbirth and Breastfeeding</item>
+        <item>Africa CDC</item>
+    </string-array>
+
+    <string-array name="link_icons">
+        <item>@drawable/ncdc1</item>
+        <item>@drawable/who1</item>
+        <item>@drawable/fmh1</item>
+        <item>@drawable/un1</item>
+        <item>@drawable/who1</item>
+        <item>@drawable/uscdc1</item>
+        <item>@drawable/who1</item>
+        <item>@drawable/who1</item>
+        <item>@drawable/who1</item>
+        <item>@drawable/africa1</item>
+    </string-array>
+
+    <!--External Links-->
+
+    <string-array name="state_names">
+        <item>Lagos State</item>
+        <item>Kano State</item>
+        <item>Abuja FCT</item>
+        <item>Katsina State</item>
+        <item>Borno State</item>
+        <item>Bauchi State</item>
+        <item>Jigawa State</item>
+        <item>Ogun State</item>
+        <item>Kaduna State</item>
+        <item>Gombe State</item>
+        <item>Edo State</item>
+        <item>Oyo State</item>
+        <item>Sokoto State</item>
+        <item>Rivers State</item>
+        <item>Zamfara State</item>
+        <item>Kwara State</item>
+        <item>Plateau State</item>
+        <item>Osun State</item>
+        <item>Nasarawa State</item>
+        <item>Yobe State</item>
+        <item>Kebbi State</item>
+        <item>Delta State</item>
+        <item>Adamawa State</item>
+        <item>Niger State</item>
+        <item>Ekiti State</item>
+        <item>Ondo State</item>
+        <item>Akwa-Ibom State</item>
+        <item>Taraba State</item>
+        <item>Enugu State</item>
+        <item>Ebonyi State</item>
+        <item>Abia State</item>
+        <item>Imo State</item>
+        <item>Bayelsa State</item>
+        <item>Benue State</item>
+        <item>Anambra State</item>
+    </string-array>
+
+    <string-array name="sorted_state_names">
+        <item>Abia State</item>
+        <item>Abuja FCT</item>
+        <item>Adamawa State</item>
+        <item>Akwa-Ibom State</item>
+        <item>Anambra State</item>
+        <item>Bauchi State</item>
+        <item>Bayelsa State</item>
+        <item>Benue State</item>
+        <item>Borno State</item>
+        <item>Cross-River State</item>
+        <item>Delta State</item>
+        <item>Ebonyi State</item>
+        <item>Edo State</item>
+        <item>Ekiti State</item>
+        <item>Enugu State</item>
+        <item>Gombe State</item>
+        <item>Imo State</item>
+        <item>Jigawa State</item>
+        <item>Kaduna State</item>
+        <item>Kano State</item>
+        <item>Katsina State</item>
+        <item>Kebbi State</item>
+        <item>Kogi State</item>
+        <item>Kwara State</item>
+        <item>Lagos State</item>
+        <item>Nasarawa State</item>
+        <item>Niger State</item>
+        <item>Ogun State</item>
+        <item>Ondo State</item>
+        <item>Osun State</item>
+        <item>Oyo State</item>
+        <item>Plateau State</item>
+        <item>Rivers State</item>
+        <item>Sokoto State</item>
+        <item>Taraba State</item>
+        <item>Yobe State</item>
+        <item>Zamfara State</item>
+    </string-array>
+
+    <string-array name="other_stats_names">
+        <item>globalConfirmedCases</item>
+        <item>countriesAffected</item>
+        <item>globalConfirmedDeaths</item>
+        <item>localCasesConfirmed</item>
+        <item>localActiveCases</item>
+        <item>localCasesDischarged</item>
+        <item>localDeaths</item>
+        <item>statesAffected</item>
+        <item>localSamplesTested</item>
+        <item>africaCasesConfirmed</item>
+        <item>africaDeaths</item>
+        <item>africaRecoveries</item>
+    </string-array>
+
+    <!-- Strings used for notification -->
+    <string name="default_notification_channel_id">primary_notification_channel</string>
+    <string name="msg_subscribed">subscription successful</string>
+    <string name="msg_subscribe_failed">subscription was not successful</string>
+</resources>
